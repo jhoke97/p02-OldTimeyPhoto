@@ -23,18 +23,18 @@ int main()
   int columns = 0;
     for(int i = 0; i <bmp.size(); i++)
       {
-        rows = rows + 1;
+        rows++;
           for(int x = 0; x < bmp[i].size(); x++)
           {
-            columns = columns + 1;
+            columns++;
           }
       }
-      cout << rows << endl << columns << endl;
+    cout << "machuphichu.bmp has beel loaded. It has " << rows << " rows and " << columns << " columns." << endl;
     if(image.isImage())
      {
-      for(int i = 0; i <rows; i++)
+      for(int i = 0; i <bmp.size(); i++)
         {
-          for(int j = 0; j <columns; j++)
+          for(int j = 0; j <bmp[i].size(); j++)
            {
               rgb = bmp[i][j];
               int greyScale = (rgb.red +rgb.green +rgb.blue) / RGB_3;
