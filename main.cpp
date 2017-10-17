@@ -7,13 +7,11 @@
 
 using namespace std;
 const int RGB_3 = 3;
-const int GRAIN_RATIO = 7; //The lower this number the more grain will be added
+const int GRAIN_RATIO = 25; //The lower this number the more grain will be added
 int main()
  {
   srand (time(NULL));
 
-  int rows = 0;
-  int columns = 0;
   bool isImage;
   bool validImage = false;
   string fileName;
@@ -43,16 +41,6 @@ int main()
         }while(validImage == false);
    }
   bmp = image.toPixelMatrix();
- /*find rows and columns
-     for(int i = 0; i <bmp.size(); i++)
-      {
-        rows++;
-          for(int x = 0; x < bmp[i].size(); x++)
-          {
-            columns++;
-          }
-      }
-      cout << rows << endl << columns << endl; */
 
   //convert image to greyscale
       for(int i = 0; i <bmp.size(); i++)
